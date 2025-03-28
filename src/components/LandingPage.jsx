@@ -36,7 +36,8 @@ const LandingPage = ({ randomImage }) => {
             <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
               <a
                 href={`#slide${index === 0 ? randomImage.length : index}`}
-                className="btn btn-circle bg-[rgba(0,0,0,0.3)] border border-transparent text-2xl"
+                className="btn btn-circle hover:bg-transparent hover:border-transparent hover:border-none bg-transparent border border-transparent text-2xl"
+                style={{ textShadow: "2px 2px 4px #000" }}
               >
                 ❮
               </a>
@@ -44,7 +45,8 @@ const LandingPage = ({ randomImage }) => {
                 href={`#slide${
                   index === randomImage.length - 1 ? 1 : index + 2
                 }`}
-                className="btn btn-circle bg-[rgba(0,0,0,0.3)] border border-transparent text-2xl"
+                className="btn btn-circle hover:bg-transparent hover:border-transparent hover:border-none bg-transparent border border-transparent text-2xl"
+                style={{ textShadow: "2px 2px 4px #000" }}
               >
                 ❯
               </a>
