@@ -58,9 +58,7 @@ const TvCard = ({ tvShows }) => {
               )}
 
               <div className="text-center flex flex-col items-center justify-center min-h-20">
-                <p className="text-white text-xs sm:text-sm md:text-base lg:text-lg">
-                  {movie.name}
-                </p>
+                <p className="text-white text-xs sm:text-sm">{movie.name}</p>
               </div>
             </div>
           ))}

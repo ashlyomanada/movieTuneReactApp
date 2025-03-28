@@ -35,7 +35,7 @@ const Navbar = () => {
     >
       <div className="">
         <h5
-          className="text-sm sm:text-base md:text-lg lg:text-xl font-medium"
+          className="text-lg lg:text-xl font-medium"
           style={{ textShadow: "2px 2px 4px #000" }}
         >
           MovieTune
@@ -45,7 +45,7 @@ const Navbar = () => {
       <ul
         className={`${
           isNavShow ? "-left-full opacity-0" : "left-0 opacity-100"
-        } absolute h-screen w-screen top-0 gap-10 lg:h-auto lg:w-auto lg:opacity-100 lg:static flex flex-col items-center justify-center bg-black lg:bg-transparent lg:flex-row lg:gap-12 xl:gap-20 transition-all duration-500 ease-in-out`}
+        } absolute h-screen w-screen top-0 gap-10 lg:h-auto lg:w-auto lg:opacity-100 lg:static flex flex-col items-center justify-center bg-black lg:bg-transparent lg:flex-row lg:gap-12 xl:gap-16 transition-all duration-500 ease-in-out`}
       >
         {[
           { path: "/", name: "Home" },
@@ -62,7 +62,7 @@ const Navbar = () => {
                   isActive
                     ? "border-b-4 border-orange-600"
                     : "hover:border-orange-600"
-                } transition-all duration-300 text-sm sm:text-base md:text-lg lg:text-xl font-medium`
+                } transition-all duration-300 text-sm sm:text-base md:text-lg lg:text-sm font-medium`
               }
               onClick={() => toggleLink()}
               style={{ textShadow: "2px 2px 4px #000" }}
@@ -74,7 +74,7 @@ const Navbar = () => {
       </ul>
 
       <button
-        className="lg:hidden z-50 text-sm sm:text-base md:text-lg lg:text-xl font-medium"
+        className="lg:hidden z-50 text-xl font-medium"
         onClick={toggleNav}
         style={{ textShadow: "2px 2px 4px #000" }}
       >

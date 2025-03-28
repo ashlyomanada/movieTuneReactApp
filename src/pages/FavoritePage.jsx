@@ -3,6 +3,7 @@ import { useFavoritesContext } from "../context/FavoritesContext";
 import Card from "../components/Card";
 import Navbar from "../components/Navbar";
 import Loader from "../components/Loader";
+import Header from "../components/typography/Header";
 
 const Favorites = () => {
   const { favorites } = useFavoritesContext();
@@ -22,11 +23,11 @@ const Favorites = () => {
       {loading ? (
         <Loader />
       ) : (
-        <div className="min-h-screen text-white flex flex-col items-center gap-3 py-20 lg:py-14 lg:px-20 bg-black">
-          <h1 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold flex gap-3 justify-center items-center pt-3 md:pt-5">
+        <div className="min-h-screen text-white flex flex-col items-center gap-3 py-20 lg:py-14 px-3 md:px-10 lg:px-20 bg-black">
+          <Header>
             <i className="fa-solid fa-clapperboard text-orange-600"></i>{" "}
             Favorite Movies
-          </h1>
+          </Header>
 
           {favorites.length > 0 ? (
             <Card movies={favorites} />

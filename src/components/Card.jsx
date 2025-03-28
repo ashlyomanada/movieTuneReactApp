@@ -25,7 +25,7 @@ const Card = ({ movies }) => {
   };
 
   return (
-    <div className="container mx-auto px-3 ">
+    <>
       {movies && movies.length > 0 ? (
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-7 place-items-center">
           {movies.map((movie, index) => (
@@ -69,9 +69,7 @@ const Card = ({ movies }) => {
               )}
 
               <div className="text-center flex flex-col items-center justify-center min-h-20">
-                <p className="text-white text-xs sm:text-sm md:text-base lg:text-lg">
-                  {movie.title}
-                </p>
+                <p className="text-white text-xs sm:text-sm">{movie.title}</p>
               </div>
             </div>
           ))}
@@ -84,7 +82,7 @@ const Card = ({ movies }) => {
           </h1>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

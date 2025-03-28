@@ -21,7 +21,7 @@ const Casts = () => {
     fetchCasts();
   }, [id]);
   return (
-    <div className="min-h-screen p-20 bg-black text-white flex flex-col items-start gap-3">
+    <div className="min-h-screen p-5 md:p-10 lg:p-20 bg-black text-white flex flex-col items-start gap-3">
       <div className="flex justify-between w-full items-center">
         <Header>Casts</Header>
         <button
@@ -31,7 +31,7 @@ const Casts = () => {
           Back
         </button>
       </div>
-      <div className="grid grid-cols-10 gap-3">
+      <div className="grid gap-3 grid-cols-3 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10">
         {casts.map((cast) => (
           <Link
             to={`/movies/details/${id}/casts/${cast.id}/biography`}
@@ -49,7 +49,7 @@ const Casts = () => {
                 display: imageLoad[cast.cast_id] ? "block" : "none",
               }}
             />
-            <p className="text-xs sm:text-sm md:text-base lg:text-lg text-center">
+            <p className="text-xs sm:text-sm md:text-base text-center">
               {cast.original_name}
             </p>
           </Link>

@@ -97,10 +97,10 @@ const Episodes = () => {
                         />
                       </div>
                       <div className="flex flex-col p-2 gap-1">
-                        <span className="text-orange-500 text-xs sm:text-sm md:text-base lg:text-lg">
+                        <span className="text-orange-500 text-xs sm:text-sm md:text-base">
                           Episode {episode.episode_number}
                         </span>
-                        <span className="text-xs sm:text-sm md:text-base lg:text-lg">
+                        <span className="text-xs sm:text-sm md:text-base">
                           {episode.name}
                         </span>
                       </div>

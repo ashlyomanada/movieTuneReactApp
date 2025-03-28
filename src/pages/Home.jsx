@@ -71,7 +71,7 @@ function Home() {
           <>
             <LandingPage randomImage={randomImage} />
             <div className="flex flex-col items-start lg:px-20 bg-black text-white">
-              <div className="flex pt-10 bg-black">
+              <div className="flex pt-10 bg-black w-full">
                 <Genre />
               </div>
               <div id="moviesSection" style={{ background: "black" }}>
@@ -109,7 +109,9 @@ function Home() {
                   )}
                 </div>
 
-                <Card movies={movies} />
+                <div className="px-3 md:px-10">
+                  <Card movies={movies} />
+                </div>
               </div>
             </div>
           </>

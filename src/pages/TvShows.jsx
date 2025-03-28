@@ -6,6 +6,7 @@ import { useToggleContext } from "../context/ToggleContext";
 import { findTvShow } from "../services/Api";
 import Loader from "../components/Loader";
 import Button from "../components/Button";
+import Header from "../components/typography/Header";
 const TvShows = () => {
   const [tvShows, setTvShows] = useState([]);
   const [curShows, setCurShows] = useState([]);
@@ -59,7 +60,7 @@ const TvShows = () => {
       {loading ? (
         <Loader />
       ) : (
-        <div className="min-h-screen text-white flex flex-col items-center justify-center py-20 lg:py-14 lg:px-20 bg-black">
+        <div className="min-h-screen text-white flex flex-col items-center justify-center py-20 lg:py-14 px-3 md:px-10 lg:px-20 bg-black">
           <div className="flex flex-col items-center pt-3 md:pt-5">
             <div
               className={`${
@@ -83,9 +84,9 @@ const TvShows = () => {
                 </Button>
               </form>
             </div>
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold flex gap-3 items-center text-white lg:pb-4">
+            <Header>
               <i className="fa-solid fa-star text-orange-600"></i> TV Shows
-            </h1>
+            </Header>
             <TvCard tvShows={tvShows} />
           </div>
         </div>

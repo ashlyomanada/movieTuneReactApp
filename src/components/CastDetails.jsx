@@ -72,8 +72,8 @@ const CastDetails = () => {
       {isLoading ? (
         <Loader />
       ) : (
-        <div className="min-h-screen flex flex-col px-5 md:px-10 lg:px-20 pb-20 pt-10 bg-black relative">
-          <div className="w-full lg:min-h-screen flex flex-col py-10 md:py-20 lg:py-10 lg:flex-row gap-5">
+        <div className="min-h-screen flex flex-col px-5 md:px-10 lg:px-20 pb-20 md:pt-10 bg-black relative">
+          <div className="w-full flex flex-col py-5 md:py-20 lg:py-10 lg:flex-row gap-5">
             <div className="flex items-center lg:h-full lg:w-[25%]">
               <img
                 className="h-64 md:h-80 aspect-[2/3] lg:h-auto"
@@ -85,13 +85,13 @@ const CastDetails = () => {
               <h1 className="text-3xl md:text-4xl lg:text-5xl text-orange-600 font-bold">
                 {cast.name}
               </h1>
-              <p className="text-xs sm:text-sm md:text-base lg:text-lg">
+              <p className="text-xs sm:text-sm md:text-base text-white">
                 {cast.biography || "Biography : No Biography"}
               </p>
-              <p className="text-xs sm:text-sm md:text-base lg:text-lg">
+              <p className="text-xs sm:text-sm md:text-base text-white">
                 Birthday : {cast.birthday || "No Birthday to show"}
               </p>
-              <p className="text-xs sm:text-sm md:text-base lg:text-lg">
+              <p className="text-xs sm:text-sm md:text-base text-white">
                 Place of Birth : {cast.place_of_birth || "No Place of Birth"}
               </p>
 
@@ -103,7 +103,7 @@ const CastDetails = () => {
                   <i className="fa-solid fa-house"></i>
                 </Link>
                 <button
-                  className="py-2 px-4 rounded-lg text-sm sm:text-base md:text-lg lg:text-xl font-medium bg-[#1f1f1f]"
+                  className="py-2 px-4 rounded-lg text-sm sm:text-base md:text-lg lg:text-xl font-medium bg-[#1f1f1f] text-white"
                   onClick={() => navigate(-1)}
                 >
                   Back

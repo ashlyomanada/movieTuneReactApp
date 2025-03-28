@@ -4,6 +4,7 @@ import { getPopularMovies } from "../services/Api.js";
 import Card from "../components/Card.jsx";
 import Navbar from "../components/Navbar.jsx";
 import Loader from "../components/Loader.jsx";
+import Header from "../components/typography/Header.jsx";
 
 const Popular = () => {
   const [popularMovies, setPopularMovies] = useState([]);
@@ -29,12 +30,12 @@ const Popular = () => {
       {loading ? (
         <Loader />
       ) : (
-        <div className="min-h-screen text-white flex flex-col items-center justify-center py-20 lg:py-14 lg:px-20 bg-black">
+        <div className="min-h-screen text-white flex flex-col items-center justify-center py-20 lg:py-14 px-3 md:px-10 lg:px-20 bg-black">
           <div className="flex flex-col items-center gap-4 pt-3 md:pt-5 ">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold flex gap-3 items-center lg:pt-5">
+            <Header>
               <i className="fa-solid fa-fire text-orange-600"></i> Popular
               Movies
-            </h1>
+            </Header>
             <Card movies={popularMovies} />
           </div>
         </div>

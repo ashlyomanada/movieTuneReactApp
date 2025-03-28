@@ -3,6 +3,7 @@ import { getTopRatedMovies } from "../services/Api";
 import Card from "../components/Card";
 import Navbar from "../components/Navbar";
 import Loader from "../components/Loader";
+import Header from "../components/typography/Header";
 
 const Movies = () => {
   const [topRatedMovies, setTopRatedMovies] = useState([]);
@@ -31,11 +32,13 @@ const Movies = () => {
       ) : (
         <div className="min-h-screen text-white flex flex-col items-center justify-center py-20 lg:py-14 lg:px-20 bg-black">
           <div className="flex flex-col items-center gap-4 pt-3 md:pt-5">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold flex gap-3 items-center lg:pt-5">
+            <Header>
               <i className="fa-solid fa-star text-orange-600"></i> Top Rated
               Movies
-            </h1>
-            <Card movies={topRatedMovies} />
+            </Header>
+            <div className="px-3 md:px-10">
+              <Card movies={topRatedMovies} />
+            </div>
           </div>
         </div>
       )}
