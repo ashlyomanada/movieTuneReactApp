@@ -1,5 +1,5 @@
 const APIKEY = "04c35731a5ee918f014970082a0088b1";
-const IMGPATH = "https://image.tmdb.org/t/p/w1280/";
+// const IMGPATH = "https://image.tmdb.org/t/p/w1280/";
 
 export const getEpisodes = async (tv_id, season_number) => {
   const url = `https://api.themoviedb.org/3/tv/${tv_id}/season/${season_number}?api_key=${APIKEY}&language=en-US`;

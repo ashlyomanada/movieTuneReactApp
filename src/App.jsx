@@ -13,7 +13,6 @@ import TvshowsDetails from "./pages/TvshowsDetails";
 import Episodes from "./components/Episodes";
 import LoaderProvider from "./context/LoaderContext";
 import CastDetails from "./components/CastDetails";
-import Footer from "./components/Footer";
 import "./App.css";
 
 function App() {
@@ -41,7 +40,6 @@ function App() {
               element={<Episodes />}
             />
           </Routes>
-          {/* <Footer /> */}
         </LoaderProvider>
       </ToggleContext>
     </Router>

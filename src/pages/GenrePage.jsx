@@ -23,7 +23,8 @@ const GenrePage = () => {
           getGenre(),
         ]);
 
-        const genre = genresResponse.find((g) => g.id == id) || null;
+        const genre =
+          genresResponse.find((g) => parseInt(g.id) === parseInt(id)) || null;
 
         setMovieGenres(moviesResponse);
         setSelectedGenre(genre);

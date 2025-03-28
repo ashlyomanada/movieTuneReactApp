@@ -24,7 +24,7 @@ const TvshowsDetails = () => {
 
   useEffect(() => {
     fetchTvShowDetails();
-  }, []);
+  }, [id]);
 
   return isLoading ? (
     <Loader />

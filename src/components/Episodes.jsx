@@ -53,7 +53,7 @@ const Episodes = () => {
   useEffect(() => {
     fetchEpisodes();
     fetchTvShowDetails();
-  }, []);
+  }, [id, seasonNumber]);
 
   return (
     <div className="min-h-screen flex flex-col items-start px-3  md:px-10 lg:px-20 py-10 bg-black gap-3 text-white">

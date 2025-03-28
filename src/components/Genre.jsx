@@ -18,11 +18,10 @@ const Genre = () => {
     <>
       <div className="lg:hidden carousel carousel-end rounded-box flex gap-3 w-full px-5 md:px-10 lg:px-0">
         {genre.map((gen) => (
-          <div className="carousel-item">
-            <Button key={gen.id}>
+          <div className="carousel-item" key={gen.id}>
+            <Button>
               <Link
                 to={`/movies/genre/${gen.id}`}
-                key={gen.id}
                 className="text-xs no-underline"
               >
                 {gen.name}

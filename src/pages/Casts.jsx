@@ -20,7 +20,7 @@ const Casts = () => {
   };
   useEffect(() => {
     fetchCasts();
-  }, []);
+  }, [id]);
   return (
     <div className="min-h-screen p-20 bg-black text-white flex flex-col items-start gap-3">
       <div className="flex justify-between w-full items-center">

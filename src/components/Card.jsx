@@ -17,7 +17,7 @@ const Card = ({ movies }) => {
   };
 
   const handleScrollTop = () => {
-    if (location.pathname == `/movies/details/${id}`) {
+    if (location.pathname === `/movies/details/${id}`) {
       window.scrollTo(0, 0);
       setIsLoading(true);
     }

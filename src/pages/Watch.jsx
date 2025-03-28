@@ -46,6 +46,7 @@ const Watch = () => {
             className="h-full"
             width="100%"
             src={link}
+            title={`Movie Stream - ${id} - ${server}`} // ✅ Added unique title
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
           ></iframe>
