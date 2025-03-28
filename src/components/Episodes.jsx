@@ -13,44 +13,45 @@ const Episodes = () => {
   const { id, seasonNumber } = useParams();
   const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
-  const fetchEpisodes = async () => {
-    setIsLoading(true);
-    try {
-      const response = await getEpisodes(id, seasonNumber);
-      setSeasonName(response.name);
-      setCurSeason(response.season_number);
-      //   console.log("episodes:", response.episodes);
-      setShowEpisodes(response.episodes);
-    } catch (error) {
-      console.error("Error fetching episodes:", error);
-      setIsLoading(true);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
-  const fetchTvShowDetails = async () => {
-    try {
-      const response = await getTvShowOverview(id);
-      const seasonIndex =
-        parseInt(seasonNumber) === 1 ? 0 : parseInt(seasonNumber) - 1;
-
-      if (response.seasons && response.seasons.length > seasonIndex) {
-        const episodesData = response.seasons[seasonIndex]?.episodes || [];
-        setDetails(episodesData);
-        // console.log("Fetched Details:", episodesData);
-      } else {
-        console.error("Invalid season number or no data available.");
-        setDetails([]);
-      }
-    } catch (error) {
-      console.error("Error fetching TV show details:", error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
 
   useEffect(() => {
+    const fetchEpisodes = async () => {
+      setIsLoading(true);
+      try {
+        const response = await getEpisodes(id, seasonNumber);
+        setSeasonName(response.name);
+        setCurSeason(response.season_number);
+        //   console.log("episodes:", response.episodes);
+        setShowEpisodes(response.episodes);
+      } catch (error) {
+        console.error("Error fetching episodes:", error);
+        setIsLoading(true);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
+    const fetchTvShowDetails = async () => {
+      try {
+        const response = await getTvShowOverview(id);
+        const seasonIndex =
+          parseInt(seasonNumber) === 1 ? 0 : parseInt(seasonNumber) - 1;
+
+        if (response.seasons && response.seasons.length > seasonIndex) {
+          const episodesData = response.seasons[seasonIndex]?.episodes || [];
+          setDetails(episodesData);
+          // console.log("Fetched Details:", episodesData);
+        } else {
+          console.error("Invalid season number or no data available.");
+          setDetails([]);
+        }
+      } catch (error) {
+        console.error("Error fetching TV show details:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+
     fetchEpisodes();
     fetchTvShowDetails();
   }, [id, seasonNumber]);
