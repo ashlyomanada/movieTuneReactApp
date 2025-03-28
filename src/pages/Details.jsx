@@ -18,21 +18,6 @@ const Details = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const suggestionsRef = useRef(null);
 
-  const fetchMovieDetails = async () => {
-    try {
-      const response = await getSelectedMovieDetails(id);
-      const similarResponse = await getSimilarMovies(id);
-      const recomResponse = await getRecommendations(id);
-      setDetails(response);
-      setSimilarMovies(similarResponse.results);
-      setRecoMovies(recomResponse.results);
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -41,6 +26,20 @@ const Details = () => {
   };
 
   useEffect(() => {
+    const fetchMovieDetails = async () => {
+      try {
+        const response = await getSelectedMovieDetails(id);
+        const similarResponse = await getSimilarMovies(id);
+        const recomResponse = await getRecommendations(id);
+        setDetails(response);
+        setSimilarMovies(similarResponse.results);
+        setRecoMovies(recomResponse.results);
+      } catch (error) {
+        console.log(error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
     fetchMovieDetails();
   }, [id]);
 

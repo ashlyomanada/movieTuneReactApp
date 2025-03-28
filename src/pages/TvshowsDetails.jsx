@@ -10,19 +10,18 @@ const TvshowsDetails = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  const fetchTvShowDetails = async () => {
-    try {
-      const response = await getTvShowOverview(id);
-      setDetails(response);
-      setSeasons(response.seasons);
-    } catch (error) {
-      console.error("Error fetching TV show details:", error);
-    } finally {
-      setIsLoading(false);
-    }
-  };
-
   useEffect(() => {
+    const fetchTvShowDetails = async () => {
+      try {
+        const response = await getTvShowOverview(id);
+        setDetails(response);
+        setSeasons(response.seasons);
+      } catch (error) {
+        console.error("Error fetching TV show details:", error);
+      } finally {
+        setIsLoading(false);
+      }
+    };
     fetchTvShowDetails();
   }, [id]);
 

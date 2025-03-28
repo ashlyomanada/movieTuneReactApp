@@ -9,16 +9,15 @@ const Casts = () => {
   const [casts, setCasts] = useState([]);
   const [imageLoad, setImageLoad] = useState({});
 
-  const fetchCasts = async () => {
-    const response = await getMovieCasts(id);
-    setCasts(response.cast);
-    // console.log(response.cast);
-  };
-
   const handleImageLoad = (id) => {
     setImageLoad((prev) => ({ ...prev, [id]: true }));
   };
   useEffect(() => {
+    const fetchCasts = async () => {
+      const response = await getMovieCasts(id);
+      setCasts(response.cast);
+      // console.log(response.cast);
+    };
     fetchCasts();
   }, [id]);
   return (
