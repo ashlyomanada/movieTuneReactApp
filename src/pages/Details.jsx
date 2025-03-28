@@ -27,6 +27,7 @@ const Details = () => {
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
+      setIsLoading(true); // Ensure loading state is set before fetching
       try {
         const response = await getSelectedMovieDetails(id);
         const similarResponse = await getSimilarMovies(id);
@@ -41,7 +42,7 @@ const Details = () => {
       }
     };
     fetchMovieDetails();
-  }, [id]);
+  }, [id, setIsLoading]); // Added `setIsLoading`
 
   useEffect(() => {
     const handleScroll = () => {
