@@ -2,11 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import { getSelectedMovieDetails } from "../services/Api.js";
-import {
-  getSimilarMovies,
-  getRecommendations,
-  getMovieCasts,
-} from "../services/Tmdb.js";
+import { getSimilarMovies, getRecommendations } from "../services/Tmdb.js";
 import { Link, useNavigate } from "react-router-dom";
 import Card from "../components/Card.jsx";
 import { useLoaderContext } from "../context/LoaderContext.jsx";
