@@ -16,7 +16,7 @@ const Genre = () => {
   }, []);
   return (
     <>
-      <div className="lg:hidden carousel carousel-end rounded-box flex gap-3 w-full px-5 md:px-10 lg:px-0">
+      <div className="lg:hidden carousel carousel-end rounded-box flex gap-3 w-full ">
         {genre.map((gen) => (
           <div className="carousel-item" key={gen.id}>
             <Button>

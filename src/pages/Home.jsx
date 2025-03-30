@@ -70,7 +70,7 @@ function Home() {
         ) : (
           <>
             <LandingPage randomImage={randomImage} />
-            <div className="flex flex-col items-start lg:px-20 bg-black text-white">
+            <div className="flex flex-col items-start px-5 md:px-10 lg:px-20 bg-black text-white">
               <div className="flex pt-10 bg-black w-full">
                 <Genre />
               </div>
@@ -109,9 +109,7 @@ function Home() {
                   )}
                 </div>
 
-                <div className="px-3 md:px-10">
-                  <Card movies={movies} />
-                </div>
+                <Card movies={movies} />
               </div>
             </div>
           </>
