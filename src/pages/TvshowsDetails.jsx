@@ -65,7 +65,7 @@ const TvshowsDetails = () => {
             <img
               src={`https://image.tmdb.org/t/p/w1280${details.poster_path}`}
               alt={details.original_name}
-              className="flex justify-self-start h-60 md:h-96 object-contain"
+              className="flex justify-self-start h-60 md:h-96 object-contain rounded-lg"
             />
           </div>
 
@@ -83,7 +83,7 @@ const TvshowsDetails = () => {
                 details.Genres.map((genre, index) => (
                   <button
                     key={index}
-                    className="bg-[#1f1f1f] py-2 px-3 rounded-full text-white text-sm sm:text-base"
+                    className="bg-[#1f1f1f] py-2 px-3 rounded-lg text-white text-sm sm:text-base"
                   >
                     {genre}
                   </button>
@@ -95,7 +95,7 @@ const TvshowsDetails = () => {
                 <Link
                   to={`/tvShows/${id}/season/${seasons.season_number}/episodes`}
                   key={index}
-                  className="bg-orange-700 py-2 px-3 rounded-full text-white no-underline text-sm sm:text-base"
+                  className="bg-orange-700 py-2 px-3 rounded-lg text-white no-underline text-sm sm:text-base"
                 >
                   Season {seasons.season_number}
                 </Link>

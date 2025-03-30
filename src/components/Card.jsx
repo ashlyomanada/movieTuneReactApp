@@ -39,10 +39,10 @@ const Card = ({ movies }) => {
                 onClick={handleScrollTop}
               >
                 {!imageLoad[movie.id] && (
-                  <div className="skeleton aspect-[2/3] w-full bg-gray-300 animate-pulse"></div>
+                  <div className="skeleton aspect-[2/3] w-full bg-gray-300 animate-pulse rounded-lg"></div>
                 )}
                 <img
-                  className="object-contain"
+                  className="object-contain rounded-lg"
                   src={`https://image.tmdb.org/t/p/w1280${movie.poster_path}`}
                   alt={movie.title}
                   onLoad={() => handleImageLoad(movie.id)}

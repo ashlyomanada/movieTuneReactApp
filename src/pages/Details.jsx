@@ -75,19 +75,19 @@ const Details = () => {
       }}
     >
       <div className="min-h-screen bg-[rgba(0,0,0,0.5)] flex flex-col justify-center">
-        <div className="min-h-screen flex flex-col lg:flex-row justify-center items-center md:gap-4">
+        <div className="min-h-screen flex flex-col lg:flex-row lg:justify-center lg:items-center md:gap-4">
           <div className="hidden w-full lg:flex justify-center lg:w-auto p-3">
             <img
               src={`https://image.tmdb.org/t/p/w1280${details.poster_path}`}
               alt=""
-              className="flex justify-self-start h-52 md:h-96 object-contain"
+              className="flex justify-self-start h-52 md:h-96 object-contain rounded-lg"
             />
           </div>
-          <div className="w-full flex justify-center lg:hidden lg:w-auto p-3">
+          <div className="w-full flex justify-center lg:hidden lg:w-auto p-3 md:p-10 lg:p-0">
             <img
               src={`https://image.tmdb.org/t/p/w1280${details.backdrop_path}`}
               alt=""
-              className="flex justify-self-start h-52 md:h-96 object-contain"
+              className="flex justify-self-start h-52 md:h-96 object-contain rounded-lg"
             />
           </div>
           <div className="text-white flex flex-col items-start w-full px-3 md:px-10 pb-5 lg:px-0 lg:w-2/3 gap-3">
@@ -161,7 +161,7 @@ const Details = () => {
 
       <div
         ref={suggestionsRef}
-        className="flex flex-col bg-[rgba(0,0,0,0.8)] py-10 gap-5 md:px-10 lg:px-20"
+        className="flex flex-col bg-[rgba(0,0,0,0.8)] py-10 gap-5 px-3 md:px-10 lg:px-20"
       >
         {similarMovies?.length > 0 && (
           <>

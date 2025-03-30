@@ -42,7 +42,7 @@ const GenrePage = () => {
   return (
     <>
       <Navbar />
-      <div className="min-h-screen text-white flex flex-col items-center justify-center py-20 lg:py-14 lg:px-20 bg-black">
+      <div className="min-h-screen text-white flex flex-col items-center justify-center py-20 lg:py-14 px-3 md:px-10 lg:px-20 bg-black">
         {loading ? (
           <div id="loaderSection" className="loader-container">
             <div className="loader"></div>
@@ -57,6 +57,7 @@ const GenrePage = () => {
                 <i className="fa-solid fa-star text-orange-600"></i>
                 Genre {selectedGenre ? selectedGenre.name : "Unknown Genre"}
               </h1>
+
               <Card movies={movieGenres} />
             </div>
           </>

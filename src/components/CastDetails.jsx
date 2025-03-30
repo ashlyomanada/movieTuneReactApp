@@ -72,11 +72,11 @@ const CastDetails = () => {
       {isLoading ? (
         <Loader />
       ) : (
-        <div className="min-h-screen flex flex-col px-5 md:px-10 lg:px-20 pb-20 md:pt-10 bg-black relative">
-          <div className="w-full flex flex-col py-5 md:py-20 lg:py-10 lg:flex-row gap-5">
+        <div className="min-h-screen flex flex-col px-3 md:px-10 lg:px-20 pb-20 md:pt-10 bg-black relative">
+          <div className="w-full flex flex-col py-3 lg:py-10 lg:flex-row gap-5">
             <div className="flex items-center lg:h-full lg:w-[25%]">
               <img
-                className="h-64 md:h-80 aspect-[2/3] lg:h-auto"
+                className="h-64 md:h-80 aspect-[2/3] lg:h-auto rounded-lg"
                 src={`https://image.tmdb.org/t/p/w500/${cast.profile_path}`}
                 alt=""
               />

@@ -3,7 +3,7 @@ import Button from "./Button";
 const LandingPage = ({ randomImage }) => {
   return (
     <>
-      <div className="carousel h-screen w-full">
+      <div className="carousel h-screen w-full ">
         {randomImage.map((movie, index) => (
           <div
             key={index}
@@ -30,7 +30,7 @@ const LandingPage = ({ randomImage }) => {
             </div>
             <img
               src={`https://image.tmdb.org/t/p/w1280/${movie.backdrop_path}`}
-              className="w-full object-cover h-screen" // Optional height for consistency
+              className="w-full object-cover h-full" // Optional height for consistency
               alt={movie.title}
             />
             <div className="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">
