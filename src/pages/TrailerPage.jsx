@@ -17,8 +17,10 @@ const TrailerPage = () => {
             trailer?.official === true &&
             trailer?.site === "YouTube"
         );
+
+        setTrailerKey(result?.key);
       }
-      setTrailerKey(result?.key);
+
       //   console.log(trailerResponse.results);
     };
 
