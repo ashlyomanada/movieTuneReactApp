@@ -10,7 +10,8 @@ const TrailerPage = () => {
   useEffect(() => {
     const fetchTrailer = async () => {
       const trailerResponse = await getMovieTrailer(id);
-      if (trailerResponse) {
+
+      if (trailerResponse && Array.isArray(trailerResponse.results)) {
         const result = trailerResponse.results.find(
           (trailer) =>
             trailer?.type === "Trailer" &&
@@ -19,13 +20,13 @@ const TrailerPage = () => {
         );
 
         setTrailerKey(result?.key);
+      } else {
+        console.warn("No results found in trailerResponse:", trailerResponse);
       }
-
-      //   console.log(trailerResponse.results);
     };
 
     fetchTrailer();
-  }, []);
+  }, [id]);
   return (
     <div className="min-h-screen w-full flex flex-col items-start gap-5 justify-center lg:w-auto p-3 md:p-10 lg:p-0 bg-black">
       {trailerKey !== null ? (
@@ -38,7 +39,9 @@ const TrailerPage = () => {
           allowFullScreen
         ></iframe>
       ) : (
-        <div className="skeleton h-screen aspect-video w-full bg-gray-300 animate-pulse rounded-lg"></div>
+        <div className="flex w-full p-5">
+          <div className="skeleton h-screen aspect-video w-full bg-gray-300 animate-pulse rounded-lg"></div>
+        </div>
       )}
 
       <div className="flex gap-5 px-5 pb-5">

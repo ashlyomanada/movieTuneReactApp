@@ -1,4 +1,4 @@
-const APIKEY = process.env.API_KEY;
+const APIKEY = "04c35731a5ee918f014970082a0088b1";
 // const IMGPATH = "https://image.tmdb.org/t/p/w1280/";
 
 export const getEpisodes = async (tv_id, season_number) => {
