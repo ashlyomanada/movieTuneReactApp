@@ -10,12 +10,14 @@ const TrailerPage = () => {
   useEffect(() => {
     const fetchTrailer = async () => {
       const trailerResponse = await getMovieTrailer(id);
-      const result = trailerResponse.results.find(
-        (trailer) =>
-          trailer?.type === "Trailer" &&
-          trailer?.official === true &&
-          trailer?.site === "YouTube"
-      );
+      if (trailerResponse) {
+        const result = trailerResponse.results.find(
+          (trailer) =>
+            trailer?.type === "Trailer" &&
+            trailer?.official === true &&
+            trailer?.site === "YouTube"
+        );
+      }
       setTrailerKey(result?.key);
       //   console.log(trailerResponse.results);
     };
