@@ -90,6 +90,7 @@ const Details = () => {
               className="flex justify-self-start h-52 md:h-96 object-contain rounded-lg"
             />
           </div>
+
           <div className="text-white flex flex-col items-start w-full px-3 md:px-10 pb-5 lg:px-0 lg:w-2/3 gap-3">
             <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold">
               {details.title}
@@ -105,7 +106,7 @@ const Details = () => {
                 <i className="fa-solid fa-users"></i> Casts
               </Link>
               <Link
-                to={`/movies/details/${id}/trailers`}
+                to={`/movies/details/${id}/trailer`}
                 className="py-2 px-4 rounded-lg text-black bg-white no-underline flex items-center gap-2 text-sm sm:text-base"
               >
                 <i className="fa-solid fa-video"></i> Trailer

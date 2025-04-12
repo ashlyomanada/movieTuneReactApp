@@ -39,9 +39,10 @@ const Casts = () => {
             key={cast.cast_id}
           >
             {!imageLoad[cast.cast_id] && (
-              <div className="skeleton aspect-[2/3] w-full bg-gray-300 animate-pulse"></div>
+              <div className="skeleton aspect-[2/3] w-full bg-gray-300 animate-pulse rounded-lg"></div>
             )}
             <img
+              className="rounded-lg"
               src={`https://image.tmdb.org/t/p/w1280/${cast.profile_path}`}
               alt=""
               onLoad={() => handleImageLoad(cast.cast_id)}

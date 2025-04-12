@@ -13,6 +13,7 @@ import TvshowsDetails from "./pages/TvshowsDetails";
 import Episodes from "./components/Episodes";
 import LoaderProvider from "./context/LoaderContext";
 import CastDetails from "./components/CastDetails";
+import TrailerPage from "./pages/TrailerPage";
 import "./App.css";
 
 function App() {
@@ -27,6 +28,10 @@ function App() {
             <Route path="/movies/tv-shows" element={<TvShows />} />
             <Route path="/movies/details/:id" element={<Details />} />
             <Route path="/movies/details/:id/casts" element={<Casts />} />
+            <Route
+              path="/movies/details/:id/trailer"
+              element={<TrailerPage />}
+            />
             <Route
               path="/movies/details/:id/casts/:castId/biography"
               element={<CastDetails />}
